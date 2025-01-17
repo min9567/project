@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/noto-sans-kr@0.1.1/styles.min.css" rel="stylesheet">
+    <script src="https://lib.yongin.go.kr/include/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            const domainListEl = document.querySelector('#mail3');
+            const domainInputEl = document.querySelector('#mail2');
+            domainListEl.addEventListener('change', function (event) {
+                if (domainListEl.options[domainListEl.selectedIndex].value != "type") {
+                    domainInputEl.value = domainListEl.options[domainListEl.selectedIndex].value;
+                    domainInputEl.disabled = true;
+                } else { 
+                    domainInputEl.value = "";
+                    domainInputEl.disabled = false;
+                }
+            });
+        });
+
+    </script>
     <style>
         * {
             margin: 0;
@@ -16,6 +33,11 @@
 
         label {
             margin-left: 34px;
+            font-weight: bold;
+        }
+
+        span {
+            font-weight: bold;
         }
 
         #time {
@@ -56,7 +78,7 @@
             width: 344px;
             height: 40px;
             font-size: 18px;
-            margin: 10px 0;
+            margin: 5px 0;
             margin-left: 34px;
             padding-left: 8px;
             border: 1px solid black;
@@ -124,23 +146,33 @@
         }
 
         input[id=mail] {
-            font-size: 18px;
+            font-size: 15px;
             margin-left: 34px;
             padding-left: 8px;
-            width: 157px;
+            width: 114px;
             height: 40px;
             border-radius: 10px;
             border: 1px solid black;
         }
 
-        #content>#form>#data>#email>#mail1, #mail2 {
+        input[id=mail2] {
+            font-size: 15px;
+            padding-left: 8px;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+
+        #content>#form>#data>#email>#mail1,
+        #mail3 {
             margin-top: 7px;
         }
 
-        #content>#form>#data>#email>#mail2 {
-            width: 157px;
+        #content>#form>#data>#email>#mail3 {
+            width: 105px;
             height: 40px;
-            font-size: 18px;
+            font-size: 15px;
             border-radius: 10px;
         }
 
@@ -223,7 +255,9 @@
                         <label for="">이메일</label><br />
                         <input type="text" id="mail">
                         <span>@</span>
-                        <select name="" id="mail2">
+                        <input type="text" name="" id="mail2">
+                        <select name="" id="mail3">
+                            <option value="type">직접 입력</option>
                             <option value="naver.com">naver.com</option>
                             <option value="gmail.com">gmail.com</option>
                             <option value="daum.net">daum.net</option>
