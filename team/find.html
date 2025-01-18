@@ -14,21 +14,30 @@
             font-family: "Noto Sans Korean";
         }
 
-        h4 { 
-            margin-left: 34px;
+        h4 {
+            margin-top: 10px;
+            margin-left: 45px;
             font-size: 15px;
         }
 
         li {
             font-size: 13px;
-            margin-left: 30px;
+            margin-left: 15px;
             list-style: none;
         }
-        li:nth-child(1) {
-            letter-spacing: 25px;
-        }
-        li:nth-child(3){
-            letter-spacing: 5.5px;
+
+        input[id="ok1"] {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 16px;
+            width: 150px;
+            height: 30px;
+            background-color: rgb(241, 237, 255);
+            color: rgb(134, 134, 134);
+            border: 0;
+            border-radius: 5px;
+            box-shadow: 3px 3px 7px gray;
+            cursor: pointer;
         }
 
         #time {
@@ -38,31 +47,44 @@
             border: 1px solid #ddd;
         }
 
-        #time>#header {
+        #header {
             height: 80px;
             width: 412px;
             background-color: rgb(132, 102, 255);
         }
 
-        #time>#header>#back {
+        #header>#back {
             float: left;
             padding-left: 20px;
             padding-top: 24px;
         }
 
-        #time>#content {
+        #content {
             width: 412px;
         }
 
-        #content>#title {
+        #title {
             text-align: center;
         }
 
-        #content>#title>img {
+        #title>img {
             margin-top: 20px;
         }
-        #content>#from>#find>#find_id>ul {
+
+        #from>#find>#find_id>ul {
             border: 1px solid black;
+        }
+
+        #id_list {
+            width: 320px;
+            height: 240px;
+            border: 2px solid rgb(134, 134, 134);
+            border-radius: 10px 10px 10px 10px;
+            box-shadow: 2px 2px 6px gray;
+            padding-bottom: 10px;
+            margin-right: 30px;
+            margin-left: 25px;
+            margin-top: 7px;
         }
 
         input {
@@ -73,32 +95,97 @@
             border-bottom: 2px solid rgba(82, 82, 82, .6);
         }
 
+        #id_list>li:nth-child(1) {
+            letter-spacing: 37px;
+        }
+
+        #id_list>li:nth-child(2) {
+            letter-spacing: 4px;
+            margin-top: 10px;
+        }
+
+        #id_list>li:nth-child(3) {
+            letter-spacing: 12px;
+            margin-top: 10px;
+        }
+
         input[id="name"] {
-            margin-left: -15.5px;
+            margin-left: -27px;
         }
 
         input[id="birth"] {
-            margin-left: 11px;
+            margin-left: 7px;
         }
 
         input[id="email"] {
-            margin-left: 6px;
+            margin-left: -1px;
         }
 
-        #time>#content>#form>#find>#find_id {
+        #form>#find>#find_id {
             padding-left: 20px;
-            border: 1px solid black;
-            
+        }
+        #form2>#find2 {
+            margin-top: 30px;
         }
 
-        #time>#footer {
+        #form2>#find2>#find_pw {
+            padding-left: 20px;
+        }
+
+        #pw_list {
+            width: 320px;
+            height: 200px;
+            border: 2px solid rgb(134, 134, 134);
+            border-radius: 10px 10px 10px 10px;
+            box-shadow: 2px 2px 6px gray;
+            padding-bottom: 10px;
+            margin-right: 30px;
+            margin-left: 25px;
+            margin-top: 7px;
+        }
+
+        #pw_list>li:nth-child(1) {
+            margin-top: 15px;
+            letter-spacing: 12px;
+        }
+
+        #pw_list>li:nth-child(2) {
+            margin-top: 10px;
+            letter-spacing: 12px;
+        }
+
+        #id_ok {
+            text-align: center;
+            /* margin-bottom: 10px; */
+        }
+
+        #pw_ok {
+            text-align: center;
+            /* margin-bottom: 15px; */
+        }
+
+        input[id="ok2"] {
+            margin-top: 28px;
+            text-align: center;
+            font-size: 16px;
+            width: 150px;
+            height: 30px;
+            background-color: rgb(241, 237, 255);
+            color: rgb(134, 134, 134);
+            border: 0;
+            border-radius: 5px;
+            box-shadow: 3px 3px 7px gray;
+            cursor: pointer;
+        }
+
+        #footer {
             margin-top: 50px;
             height: 65px;
             width: 412px;
             background-color: rgb(167, 144, 255);
         }
 
-        #time>#footer>img {
+        #footer>img {
             float: right;
             padding-right: 15px;
             padding-top: 28px;
@@ -119,12 +206,29 @@
             </div>
             <form id="form" action="">
                 <div id="find">
-                    <h4 for="">아이디 찾기</h4>
+                    <h4 for="" style="letter-spacing: 4px; color: rgb(82, 82, 82); ">아이디 찾기</h4>
                     <div id="find_id">
-                        <ul>
-                            <li>이름<input type="text" name="" id="name" placeholder="이  름"></li>
+                        <ul id="id_list">
+                            <li>이름<input type="text" name="" id="name" placeholder="이        름"></li>
                             <li>생년월일<input type="text" name="" id="birth" placeholder="생년월일"></li>
-                            <li>이메일<input type="text" name="" id="email" placeholder="이메일"></li>
+                            <li>이메일<input type="text" name="" id="email" placeholder="이  메  일"></li>
+                            <div id="id_ok">
+                                <input type="submit" value="확       인" id="ok1">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+            <form id="form2" action="">
+                <div id="find2">
+                    <h4 for="" style="letter-spacing: 4px; color: rgb(82, 82, 82); ">비밀번호 찾기</h4>
+                    <div id="find_pw">
+                        <ul id="pw_list">
+                            <li>아이디<input type="text" name="" id="id" placeholder="아  이  디"></li>
+                            <li>이메일<input type="text" name="" id="email2" placeholder="이  메  일"></li>
+                            <div id="pw_ok">
+                                <input type="submit" value="확       인" id="ok2">
+                            </div>
                         </ul>
                     </div>
                 </div>
