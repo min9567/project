@@ -5,35 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/noto-sans-kr@0.1.1/styles.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Noto Sans Korean";
         }
 
         #time {
-            width: 412px;
+            position: absolute;
+            width: 100%;
             min-height: 917px;
             margin: 0 auto;
-            border: 1px solid #ddd;
         }
 
-        #time>#content {
-            width: 412px;
+        #content {
+            width: 100%;
+            background-color: white;
         }
 
-        #content>#title>img {
-            display: block;
-            margin: 0 auto;
-            padding-top: 120px;
-        }
-
-        #content > #form > #input > #input1 {
+        #title {
+            position: relative;
             text-align: center;
-            padding-top: 10px;
+            top: 70px;
+        }
+
+        #input>#input1 {
+            position: relative;
+            text-align: center;
+            top: 80px;
         }
 
         input[type="password"],
@@ -48,8 +48,14 @@
         }
 
         #input2 {
-            padding: 20px 20px;
+            position: relative;
+            text-align: center;
+            top: 105px;
             color: rgb(134, 134, 134);
+        }
+
+        #input2>label {
+            cursor: pointer;
         }
 
         input[type="checkbox"] {
@@ -59,30 +65,18 @@
             cursor: pointer;
         }
 
-        #content > #form > #input > #input2 > #check1 {
-            float: left;
-            padding-left: 60px;
+        input[id="ch1"]+label {
+            margin-right: 50px;
         }
 
-        #content > #form > #input > #input2 > #check2 {
-            float: right;
-            padding-right: 60px;
-        }
 
-        #content > #form > #input > #input2 > #check1 > label {
-            cursor: pointer;
-        }
-
-        #content > #form > #input > #input2 > #check2 > label {
-            cursor: pointer;
-        }
-
-        #content > #form > #login {
-            margin-top: 40px;
+        #form>#login {
+            top: 150px;
+            position: relative;
             text-align: center;
         }
 
-        #content > #form > #login>input {
+        #login>input {
             font-size: 22px;
             width: 250px;
             height: 40px;
@@ -94,46 +88,59 @@
             cursor: pointer;
         }
 
-        #content>#join>a {
-            float: left;
-            text-decoration-line: none;
-            padding-left: 100px;
-            padding-top: 50px;
-            font-size: 14px;
-            color: rgb(134, 134, 134);
-
-        }
-
-        #content>#find>a {
-            float: right;
-            text-decoration-line: none;
-            padding-right: 90px;
-            padding-top: 50px;
-            font-size: 14px;
-            color: rgb(134, 134, 134);
-        }
-
-        #content>#naver,
-        #kakao {
+        #join {
             text-align: center;
         }
 
-        #content>#naver {
-            padding-top: 120px;
+        #join>a {
+            top: 200px;
+            right: 80px;
+            position: relative;
+            text-decoration-line: none;
+            font-size: 14px;
+            color: rgb(134, 134, 134);
         }
 
-        #content>#kakao {
-            padding-top: 19px;
+        #find {
+            text-align: center;
         }
 
-        #time>#footer {
-            margin-top: 50px;
+        #find>a {
+            top: 180px;
+            left: 45px;
+            position: relative;
+            text-decoration-line: none;
+            font-size: 14px;
+            color: rgb(134, 134, 134);
+        }
+
+        #connection {
+            position: relative;
+            text-align: center;
+            top: 240px;
+        }
+
+        #naver>a img {
+            border-radius: 5px;
+        }
+
+        #kakao {
+            padding-top: 10px;
+        }
+
+        #kakao>a img {
+            border-radius: 5px;
+        }
+
+        #footer {
+            top: 312px;
+            position: relative;
             height: 65px;
-            width: 412px;
-            background-color: #A790FF;
+            width: 100%;
+            background-color: rgb(167, 144, 255);
         }
 
-        #time>#footer>img {
+        #footer>img {
             float: right;
             padding-right: 15px;
             padding-top: 28px;
@@ -154,12 +161,8 @@
                         <input type="password" name="" id="" placeholder="비 밀 번 호">
                     </div>
                     <div id="input2">
-                        <div id="check1">
-                            <input type="checkbox" name="" id="ch1"> <label for="ch1">자동 로그인</label>
-                        </div>
-                        <div id="check2">
-                            <input type="checkbox" name="" id="ch2"> <label for="ch2">아이디 저장</label>
-                        </div>
+                        <input type="checkbox" name="" id="ch1"> <label for="ch1">자동 로그인</label>
+                        <input type="checkbox" name="" id="ch2"> <label for="ch2">아이디 저장</label>
                     </div>
                 </div>
                 <div id="login">
@@ -172,15 +175,17 @@
             <div id="find">
                 <a href="find.html">아이디/비밀번호 찾기</a>
             </div>
-            <div id="naver">
-                <a href=""><img src="image/naver.png" alt=""></a>
-            </div>
-            <div id="kakao">
-                <a href=""><img src="image/kakao.png" alt=""></a>
+            <div id="connection">
+                <div id="naver">
+                    <a href=""><img src="image/naver.svg" alt=""></a>
+                </div>
+                <div id="kakao">
+                    <a href=""><img src="image/kakao.svg" alt=""></a>
+                </div>
             </div>
         </div>
         <div id="footer">
-            <img src="image/made.png" alt="">
+            <img src="image/made by 띠동갑.svg" alt="">
         </div>
 </body>
 
