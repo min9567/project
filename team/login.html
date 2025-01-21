@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/noto-sans-kr@0.1.1/styles.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: "Noto Sans Korean";
         }
 
         #time {
             position: absolute;
             width: 100%;
-            min-height: 917px;
+            /* min-height: 917px; */
             margin: 0 auto;
         }
 
@@ -38,7 +40,7 @@
 
         input[type="password"],
         input[type="text"] {
-            width: 80%;
+            width: 65%;
             height: 50px;
             font-size: 22px;
             margin: 20px 0;
@@ -90,28 +92,19 @@
 
         #join {
             text-align: center;
+            margin: 0 auto;
+            position: relative;
+            top: 200px;
         }
 
         #join>a {
-            top: 200px;
-            right: 80px;
-            position: relative;
             text-decoration-line: none;
             font-size: 14px;
             color: rgb(134, 134, 134);
         }
 
-        #find {
-            text-align: center;
-        }
-
-        #find>a {
-            top: 180px;
-            left: 45px;
-            position: relative;
-            text-decoration-line: none;
-            font-size: 14px;
-            color: rgb(134, 134, 134);
+        #join>a:nth-child(1) {
+            margin-right: 30px;
         }
 
         #connection {
@@ -125,7 +118,7 @@
         }
 
         #kakao {
-            padding-top: 10px;
+            padding-top: 15px;
         }
 
         #kakao>a img {
@@ -133,7 +126,7 @@
         }
 
         #footer {
-            top: 312px;
+            top: 307px;
             position: relative;
             height: 65px;
             width: 100%;
@@ -154,25 +147,25 @@
             <div id="title">
                 <img src="image/With Time.png" alt="">
             </div>
-            <form id="form" action="">
-                <div id="input">
-                    <div id="input1">
-                        <input type="text" name="" id="" placeholder="아 이 디">
-                        <input type="password" name="" id="" placeholder="비 밀 번 호">
+            <div>
+                <form id="form" action="">
+                    <div id="input">
+                        <div id="input1">
+                            <input type="text" name="" id="" placeholder="아 이 디">
+                            <input type="password" name="" id="" placeholder="비 밀 번 호">
+                        </div>
+                        <div id="input2">
+                            <input type="checkbox" name="" id="ch1"> <label for="ch1">자동 로그인</label>
+                            <input type="checkbox" name="" id="ch2"> <label for="ch2">아이디 저장</label>
+                        </div>
                     </div>
-                    <div id="input2">
-                        <input type="checkbox" name="" id="ch1"> <label for="ch1">자동 로그인</label>
-                        <input type="checkbox" name="" id="ch2"> <label for="ch2">아이디 저장</label>
+                    <div id="login">
+                        <input type="submit" value="로 그 인">
                     </div>
-                </div>
-                <div id="login">
-                    <input type="submit" value="로 그 인">
-                </div>
-            </form>
+                </form>
+            </div>
             <div id="join">
                 <a href="join.html">회원가입</a>
-            </div>
-            <div id="find">
                 <a href="find.html">아이디/비밀번호 찾기</a>
             </div>
             <div id="connection">
