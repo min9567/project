@@ -7,27 +7,6 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/noto-sans-kr@0.1.1/styles.min.css" rel="stylesheet">
     <style>
-        /* @import url(login.css) only screen and (min-width: 412px); */
-        @media screen and (max-width: 450px) {
-
-            #time,
-            #content,
-            #footer {
-                /* body { */
-                width: 100%;
-            }
-        }
-
-        @media screen and (min-width: 451px) {
-
-            #time,
-            #content,
-            #footer {
-                /* body { */
-                width: 412px;
-            }
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -40,6 +19,7 @@
             /* width: 100%; */
             min-height: 917px;
             margin: 0 auto;
+            border: 1px solid #ddd;
         }
 
         #time>#content {
@@ -182,6 +162,12 @@
             float: right;
             padding-right: 15px;
             padding-top: 28px;
+        }
+
+        @media screen and (max-width:500px) {
+            #time {
+                width: 100%;
+            }
         }
     </style>
 </head>
