@@ -8,11 +8,23 @@
     <link href="https://cdn.jsdelivr.net/npm/noto-sans-kr@0.1.1/styles.min.css" rel="stylesheet">
     <style>
         /* @import url(login.css) only screen and (min-width: 412px); */
-        @media screen and (max-width: 412px) {
+        @media screen and (max-width: 450px) {
 
-            /* #time, #content, #footer */
-            body {
+            #time,
+            #content,
+            #footer {
+                /* body { */
                 width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 451px) {
+
+            #time,
+            #content,
+            #footer {
+                /* body { */
+                width: 412px;
             }
         }
 
@@ -206,14 +218,14 @@
                 <a href="find.html">아이디/비밀번호 찾기</a>
             </div>
             <div id="naver">
-                <a href=""><img src="image/naver.png" alt=""></a>
+                <a href=""><img src="image/naver.svg" alt=""></a>
             </div>
             <div id="kakao">
-                <a href=""><img src="image/kakao.png" alt=""></a>
+                <a href=""><img src="image/kakao.svg" alt=""></a>
             </div>
         </div>
         <div id="footer">
-            <img src="image/made.png" alt="">
+            <img src="image/made by 띠동갑.svg" alt="">
         </div>
 </body>
 
