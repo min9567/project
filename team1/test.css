@@ -1,0 +1,19 @@
+#time {
+    /* width: 412px; */
+    width: 100%;
+    min-height: 917px;
+    margin: 0 auto;
+}
+
+#time>#content {
+    /* width: 412px; */
+    width: 100%;
+}
+
+#time>#footer {
+    margin-top: 50px;
+    height: 65px;
+    /* width: 412px; */
+    width: 100%;
+    background-color: #A790FF;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/noto-sans-kr@0.1.1/styles.min.css" rel="stylesheet">
+    <style>
+        /* @import url(login.css) only screen and (min-width: 412px); */
+        @media screen and (min-width: 412px) {
+            #time, #content, #footer
+            /* body */
+            {
+                width: 412px;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Noto Sans Korean";
+        }
+
+        #time {
+            position: absolute;
+            width: 100%;
+            /* min-height: 917px; */
+            margin: 0 auto;
+        }
+
+        #content {
+            width: 100%;
+            background-color: white;
+        }
+
+        #title {
+            position: relative;
+            text-align: center;
+            top: 70px;
+        }
+
+        #input>#input1 {
+            position: relative;
+            text-align: center;
+            top: 80px;
+        }
+
+        input[type="password"],
+        input[type="text"] {
+            width: 65%;
+            height: 50px;
+            font-size: 22px;
+            margin: 20px 0;
+            outline: none;
+            border: 0;
+            border-bottom: 2px solid rgba(82, 82, 82, .6);
+        }
+
+        #input2 {
+            position: relative;
+            text-align: center;
+            top: 105px;
+            color: rgb(134, 134, 134);
+        }
+
+        #input2>label {
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            vertical-align: -4px;
+            cursor: pointer;
+        }
+
+        input[id="ch1"]+label {
+            margin-right: 50px;
+        }
+
+
+        #form>#login {
+            top: 150px;
+            position: relative;
+            text-align: center;
+        }
+
+        #login>input {
+            font-size: 22px;
+            width: 250px;
+            height: 40px;
+            background-color: rgb(167, 144, 255);
+            color: white;
+            border: 0;
+            border-radius: 5px;
+            box-shadow: 3px 3px 7px gray;
+            cursor: pointer;
+        }
+
+        #join {
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+            top: 200px;
+        }
+
+        #join>a {
+            text-decoration-line: none;
+            font-size: 14px;
+            color: rgb(134, 134, 134);
+        }
+
+        #join>a:nth-child(1) {
+            margin-right: 30px;
+        }
+
+        #connection {
+            position: relative;
+            text-align: center;
+            top: 240px;
+        }
+
+        #naver>a img {
+            border-radius: 5px;
+        }
+
+        #kakao {
+            padding-top: 15px;
+        }
+
+        #kakao>a img {
+            border-radius: 5px;
+        }
+
+        #footer {
+            top: 307px;
+            position: relative;
+            height: 65px;
+            width: 100%;
+            background-color: rgb(167, 144, 255);
+        }
+
+        #footer>img {
+            float: right;
+            padding-right: 15px;
+            padding-top: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="time">
+        <div id="content">
+            <div id="title">
+                <img src="image/With Time.png" alt="">
+            </div>
+            <div>
+                <form id="form" action="">
+                    <div id="input">
+                        <div id="input1">
+                            <input type="text" name="" id="" placeholder="아 이 디">
+                            <input type="password" name="" id="" placeholder="비 밀 번 호">
+                        </div>
+                        <div id="input2">
+                            <input type="checkbox" name="" id="ch1"> <label for="ch1">자동 로그인</label>
+                            <input type="checkbox" name="" id="ch2"> <label for="ch2">아이디 저장</label>
+                        </div>
+                    </div>
+                    <div id="login">
+                        <input type="submit" value="로 그 인">
+                    </div>
+                </form>
+            </div>
+            <div id="join">
+                <a href="join.html">회원가입</a>
+                <a href="find.html">아이디/비밀번호 찾기</a>
+            </div>
+            <div id="connection">
+                <div id="naver">
+                    <a href=""><img src="image/naver.svg" alt=""></a>
+                </div>
+                <div id="kakao">
+                    <a href=""><img src="image/kakao.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <img src="image/made by 띠동갑.svg" alt="">
+        </div>
+</body>
+
+</html>
